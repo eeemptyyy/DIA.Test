@@ -3,20 +3,15 @@
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.DIA.Test PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="DIA.XUnitTestProject/UnitTest1.cs">
-    <Files>
-      <File FileName="DIA.XUnitTestProject/UnitTest1.cs" Line="4" Column="2" />
-    </Files>
+  <MonoDevelop.Ide.ItemProperties.DIA.Test PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="DIA.Test" expanded="True">
-            <Node name="DIA.XUnitTestProject" expanded="True">
-              <Node name="UnitTest1.cs" selected="True" />
-            </Node>
+          <Node name="DIA.Test" expanded="True" selected="True">
+            <Node name="DIA.XUnitTestProject" expanded="True" />
           </Node>
         </State>
       </Pad>

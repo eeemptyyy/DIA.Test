@@ -1,0 +1,41 @@
+{
+  "Files": [
+    {
+      "Id": "/Users/dn020691mnv/RiderProjects/DIA.Test/DIA.Test/obj/Debug/net8.0/scopedcss/projectbundle/DIA.Test.bundle.scp.css",
+      "PackagePath": "staticwebassets/DIA.Test.bundle.scp.css"
+    },
+    {
+      "Id": "/Users/dn020691mnv/RiderProjects/DIA.Test/DIA.Test/wwwroot/app.css",
+      "PackagePath": "staticwebassets/app.css"
+    },
+    {
+      "Id": "/Users/dn020691mnv/RiderProjects/DIA.Test/DIA.Test/wwwroot/bootstrap/bootstrap.min.css",
+      "PackagePath": "staticwebassets/bootstrap/bootstrap.min.css"
+    },
+    {
+      "Id": "/Users/dn020691mnv/RiderProjects/DIA.Test/DIA.Test/wwwroot/bootstrap/bootstrap.min.css.map",
+      "PackagePath": "staticwebassets/bootstrap/bootstrap.min.css.map"
+    },
+    {
+      "Id": "/Users/dn020691mnv/RiderProjects/DIA.Test/DIA.Test/wwwroot/favicon.png",
+      "PackagePath": "staticwebassets/favicon.png"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.DIA.Test.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.build.DIA.Test.props",
+      "PackagePath": "build\\DIA.Test.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.DIA.Test.props",
+      "PackagePath": "buildMultiTargeting\\DIA.Test.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.DIA.Test.props",
+      "PackagePath": "buildTransitive\\DIA.Test.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

@@ -1,0 +1,85 @@
+﻿@page "/data-validator"
+@using DIA.Test.Components.Features.DataValidator.Models.PageModels.DataValidatorPage
+@using DIA.Test.Components.Features.DataValidator.Services
+@using DIA.Test.Components.Features.DataValidator.Services.DataValidatorServiceFolder
+@inject IDataValidatorService DataValidatorService 
+@rendermode InteractiveServer
+
+<PageTitle>Валідація даних</PageTitle>
+<h3>Валідація даних</h3>
+
+<EditForm Model="@_formData" OnValidSubmit="@ValidateData">
+    <DataAnnotationsValidator/>
+    <ValidationSummary/>
+
+    <div class="form-group">
+        <label for="passport">Серія та номер паспорта:</label>
+        <InputText @bind-Value="@_formData.Passport" id="passport" class="form-control"/>
+        <ValidationMessage For="@(() => _formData.Passport)"/>
+    </div>
+
+    <div class="form-group">
+        <label for="tin">РНОКПП:</label>
+        <InputText @bind-Value="@_formData.Rnokpp" id="tin" class="form-control"/>
+        <ValidationMessage For="@(() => _formData.Rnokpp)"/>
+    </div>
+
+    <div class="form-group">
+        <label for="dob">Дата народження:</label>
+        <InputText @bind-Value="@_formData.DateOfBirth" id="dob" class="form-control"/>
+        <ValidationMessage For="@(() => _formData.DateOfBirth)"/>
+    </div>
+
+    <div class="form-group">
+        <label for="deviceId">Номер пристрою:</label>
+        <InputText @bind-Value="@_formData.DeviceID" id="deviceId" class="form-control"/>
+        <ValidationMessage For="@(() => _formData.DeviceID)"/>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Перевірити</button>
+</EditForm>
+
+<!-- Added success notification -->
+@if (_isSuccess)
+{
+    <div class="alert alert-success">
+        Validation successful!
+    </div>
+}
+
+<!-- Added error notification -->
+@if (!string.IsNullOrWhiteSpace(_errorMessage))
+{
+    <div class="alert alert-danger">
+    @_errorMessage
+    </div>
+}
+@code {
+    private readonly DataValidatorPageModel _formData = new();
+    private bool _isSuccess = false;
+    private string _errorMessage = string.Empty;
+
+    private void ValidateData()
+    {
+        _errorMessage = null;
+        try
+        {
+            var isValidFormData = DataValidatorService.ValidateData(_formData);
+            
+            if (isValidFormData)
+            {
+                _isSuccess = true;
+            }
+            else
+            {
+                _errorMessage = "Введенные данные не валидные";
+            }
+        }
+        catch (Exception e)
+        {
+            _isSuccess = false;
+            _errorMessage = e.Message;
+            Console.WriteLine(e);
+        }
+    }
+}
